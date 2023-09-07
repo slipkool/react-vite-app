@@ -1,12 +1,15 @@
 import React from 'react'
 import { GridColDef } from '@mui/x-data-grid'
+import DataTable from '@renderer/components/common/dataTable/DataTable'
+import { userRows } from '../../../data/data'
+import AdminLayout from '@renderer/layouts/AdminLayout'
 
 const columns: GridColDef[] = [
-  { field: 'id', headerName: 'ID', width: 90 },
+  { field: 'id', headerName: 'ID', flex: 1 },
   {
     field: 'img',
     headerName: 'Avatar',
-    width: 100,
+    flex: 1,
     renderCell: (params): React.JSX.Element => {
       return <img src={params.row.img || '/noavatar.png'} alt="" />
     }
@@ -15,42 +18,46 @@ const columns: GridColDef[] = [
     field: 'firstName',
     type: 'string',
     headerName: 'First name',
-    width: 150
+    flex: 1
   },
   {
     field: 'lastName',
     type: 'string',
     headerName: 'Last name',
-    width: 150
+    flex: 1
   },
   {
     field: 'email',
     type: 'string',
     headerName: 'Email',
-    width: 200
+    flex: 1
   },
   {
     field: 'phone',
     type: 'string',
     headerName: 'Phone',
-    width: 200
+    flex: 1
   },
   {
     field: 'createdAt',
     headerName: 'Created At',
-    width: 200,
+    flex: 1,
     type: 'string'
   },
   {
     field: 'verified',
     headerName: 'Verified',
-    width: 150,
+    flex: 1,
     type: 'boolean'
   }
 ]
 
 const Users = (): React.JSX.Element => {
-  return <div className="mainContent"></div>
+  return (
+    <AdminLayout>
+      <DataTable slug="users" columns={columns} rows={userRows} />
+    </AdminLayout>
+  )
 }
 
 export default Users

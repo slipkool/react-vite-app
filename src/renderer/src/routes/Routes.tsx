@@ -5,6 +5,7 @@ import Register from '@renderer/pages/Register/Register'
 import Home from '@renderer/pages/Dashboard/home/Home'
 import Profile from '@renderer/pages/Profile'
 import ErrorPage from '@renderer/pages/ErrorPage'
+import Users from '@renderer/pages/Dashboard/users/Users'
 
 const routes = createHashRouter([
   {
@@ -23,6 +24,10 @@ const routes = createHashRouter([
       {
         path: '/dashboard',
         element: <Home />
+      },
+      {
+        path: '/users',
+        element: <Users />
       },
       {
         path: '/me',

@@ -30,7 +30,7 @@ const Sidebar = (): React.JSX.Element => {
           </li>
 
           <li className="listItem">
-            <Link to="/me" className="menuLink flex">
+            <Link to="/users" className="menuLink flex">
               <MdDeliveryDining className="icon" />
               <span className="smallText">My Orders</span>
             </Link>
