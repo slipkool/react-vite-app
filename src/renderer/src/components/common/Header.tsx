@@ -22,7 +22,7 @@ const Header = (): React.JSX.Element => {
   return (
     <>
       <div className="searchBar flex">
-        <input type="text" placeholder="Search Dashboard" />
+        <input type="text" placeholder="Search..." />
         <BiSearchAlt className="icon" />
       </div>
 

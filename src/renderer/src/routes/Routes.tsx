@@ -5,7 +5,10 @@ import Register from '@renderer/pages/Register/Register'
 import Home from '@renderer/pages/Dashboard/home/Home'
 import Profile from '@renderer/pages/Profile'
 import ErrorPage from '@renderer/pages/ErrorPage'
-import Users from '@renderer/pages/Dashboard/users/Users'
+import List from '@renderer/pages/Dashboard/list/List'
+import New from '@renderer/pages/Dashboard/new/New'
+
+import { productInputs } from '../data/data'
 
 const routes = createHashRouter([
   {
@@ -27,7 +30,11 @@ const routes = createHashRouter([
       },
       {
         path: '/users',
-        element: <Users />
+        element: <List />
+      },
+      {
+        path: '/users/new',
+        element: <New inputs={productInputs} title="Add New Product" />
       },
       {
         path: '/me',

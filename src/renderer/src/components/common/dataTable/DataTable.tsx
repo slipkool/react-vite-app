@@ -11,6 +11,8 @@ type Props = {
   columns: GridColDef[]
   rows: object[]
   slug: string
+  titleButton: string
+  link: string
 }
 
 const DataTable = (props: Props): React.JSX.Element => {
@@ -54,6 +56,12 @@ const DataTable = (props: Props): React.JSX.Element => {
 
   return (
     <div className="dataTable">
+      <div className="datatableTitle">
+        {props.titleButton}
+        <Link to={props.link} className="link">
+          Add New
+        </Link>
+      </div>
       <DataGrid
         sx={{
           boxShadow: 2,
@@ -80,7 +88,7 @@ const DataTable = (props: Props): React.JSX.Element => {
             quickFilterProps: { debounceMs: 500 }
           }
         }}
-        pageSizeOptions={[5]}
+        pageSizeOptions={[5, 10]}
         checkboxSelection
         disableRowSelectionOnClick
         disableColumnFilter

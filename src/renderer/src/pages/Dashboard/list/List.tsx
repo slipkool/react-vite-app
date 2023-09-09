@@ -55,7 +55,13 @@ const columns: GridColDef[] = [
 const Users = (): React.JSX.Element => {
   return (
     <AdminLayout>
-      <DataTable slug="users" columns={columns} rows={userRows} />
+      <DataTable
+        slug="users"
+        columns={columns}
+        rows={userRows}
+        titleButton="Add New User"
+        link="/users/new"
+      />
     </AdminLayout>
   )
 }

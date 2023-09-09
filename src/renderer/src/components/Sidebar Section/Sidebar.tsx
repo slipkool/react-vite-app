@@ -5,10 +5,11 @@ import logo from '../../assets/logo.png'
 
 //imported icons
 import { IoMdSpeedometer } from 'react-icons/io'
-import { MdDeliveryDining, MdOutlineExplore, MdOutlinePermContactCalendar } from 'react-icons/md'
+import { MdOutlineExplore, MdOutlinePermContactCalendar } from 'react-icons/md'
 import { BsTrophy, BsCreditCard2Front, BsQuestionCircle } from 'react-icons/bs'
 import { AiOutlinePieChart } from 'react-icons/ai'
 import { BiTrendingUp } from 'react-icons/bi'
+import { FaUsers } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
 const Sidebar = (): React.JSX.Element => {
@@ -31,8 +32,8 @@ const Sidebar = (): React.JSX.Element => {
 
           <li className="listItem">
             <Link to="/users" className="menuLink flex">
-              <MdDeliveryDining className="icon" />
-              <span className="smallText">My Orders</span>
+              <FaUsers className="icon" />
+              <span className="smallText">Users</span>
             </Link>
           </li>
 

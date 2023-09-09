@@ -1,0 +1,117 @@
+:root {
+  --blackColor: hsl(0, 0%, 18%);
+  --bgColor: hsl(220, 10%, 94%);
+}
+
+.new {
+  width: 100%;
+  display: flex;
+  border-top: 1px solid gray;
+}
+.new .newContainer {
+  flex: 6;
+}
+.new .newContainer .top,
+.new .newContainer .bottom {
+  -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+  box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+  padding: 10px;
+  margin-top: 20px;
+  display: flex;
+}
+.new .newContainer .top h1,
+.new .newContainer .bottom h1 {
+  color: var(--blackColor);
+  font-size: 25px;
+}
+
+.new .newContainer .bottom .formDiv {
+  flex: 2;
+}
+.new .newContainer .top .formDiv .form,
+.new .newContainer .bottom .formDiv .form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-around;
+}
+
+.new .newContainer .bottom .formDiv .form .inputDiv {
+  width: 40%;
+  margin-bottom: 1rem;
+}
+
+.new .newContainer .bottom .formDiv .form .inputDiv label {
+  color: var(--blackColor);
+  font-weight: 400;
+  font-size: 14px;
+  display: block;
+}
+
+.new .newContainer .bottom .formDiv .form .inputDiv .input .icon {
+  color: var(--greyText);
+}
+
+.new .newContainer .bottom .formDiv .form .inputDiv .input {
+  gap: 0.5rem;
+  border-radius: 10px;
+}
+
+.new .newContainer .bottom .formDiv .form .inputDiv .input input {
+  width: 100%;
+  padding: 5px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid gray;
+  background: var(--bgColor);
+}
+
+.new .newContainer .bottom .formDiv .form .btn {
+  padding: 0.8rem;
+  background: var(--PrimaryColor);
+  border-radius: 10px;
+  color: var(--whiteColor);
+  align-items: center;
+  margin: auto;
+  justify-content: center;
+  font-size: 16px;
+  width: 100%;
+  gap: 0.5rem;
+  transition: 0.3s ease;
+}
+
+.new .newContainer .bottom .formDiv .form .btn .icon {
+  font-size: 25px;
+  transition: 0.3s ease;
+}
+
+.new .newContainer .bottom .formDiv .form .btn:hover {
+  background: var(--HoverColor);
+  color: var(--blackColor);
+}
+
+.new .newContainer .bottom .formDiv .form .btn:hover .icon {
+  color: var(--blackColor);
+  transform: translateX(5px);
+}
+
+@media screen and (max-width: 602px) {
+  .new .newContainer .bottom .formDiv {
+    gap: 1rem;
+    transform: translateY(-0.5rem);
+  }
+
+  .new .newContainer .bottom .formDiv .form {
+    gap: 0.5rem;
+  }
+
+  .new .newContainer .bottom .formDiv .form .inputDiv .input input {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .new .newContainer .bottom .formDiv .form .inputDiv {
+    width: 100%;
+  }
+}
