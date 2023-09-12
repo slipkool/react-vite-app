@@ -8,8 +8,6 @@ import ErrorPage from '@renderer/pages/ErrorPage'
 import List from '@renderer/pages/Dashboard/list/List'
 import New from '@renderer/pages/Dashboard/new/New'
 
-import { productInputs } from '../data/data'
-
 const routes = createHashRouter([
   {
     path: '/',
@@ -34,7 +32,7 @@ const routes = createHashRouter([
       },
       {
         path: '/users/new',
-        element: <New inputs={productInputs} title="Add New Product" />
+        element: <New />
       },
       {
         path: '/me',

@@ -1,4 +1,5 @@
 :root {
+  --PrimaryColor: hsl(94, 59%, 35%);
   --blackColor: hsl(0, 0%, 18%);
   --bgColor: hsl(220, 10%, 94%);
 }
@@ -46,6 +47,7 @@
   font-weight: 400;
   font-size: 14px;
   display: block;
+  margin-bottom: 1rem;
 }
 
 .new .newContainer .bottom .formDiv .form .inputDiv .input .icon {
@@ -57,7 +59,8 @@
   border-radius: 10px;
 }
 
-.new .newContainer .bottom .formDiv .form .inputDiv .input input {
+.new .newContainer .bottom .formDiv .form .inputDiv .input input,
+.new .newContainer .bottom .formDiv .form .inputDiv .input .autocomplete {
   width: 100%;
   padding: 5px;
   border: none;
@@ -93,6 +96,180 @@
 .new .newContainer .bottom .formDiv .form .btn:hover .icon {
   color: var(--blackColor);
   transform: translateX(5px);
+}
+
+.new .newContainer .bottom .formDiv .form .inputDiv .input label {
+  font-weight: 600;
+  color: #777777;
+  margin-bottom: 11px;
+  width: 100%;
+  float: left;
+  cursor: pointer;
+  padding: 0 0.6em;
+  box-sizing: border-box;
+  transition: all 0.5s ease 0s;
+}
+
+.new .newContainer .bottom .formDiv .form .inputDiv .input input[type='radio'],
+.new .newContainer .bottom .formDiv .form .inputDiv .input input[type='checkbox'] {
+  display: none;
+}
+
+.new .newContainer .bottom .formDiv .form .inputDiv .input input[type='checkbox'] + label {
+  line-height: 3em;
+}
+
+.new .newContainer .bottom .formDiv .form .inputDiv .input input[type='radio'] + label {
+  border-radius: 50px;
+}
+
+.new .newContainer .bottom .formDiv .form .inputDiv .input input[type='radio']:disabled + label,
+.new .newContainer .bottom .formDiv .form .inputDiv .input input[type='checkbox']:disabled + label {
+  color: #ccc !important;
+  cursor: not-allowed;
+}
+.new
+  .newContainer
+  .bottom
+  .formDiv
+  .form
+  .inputDiv
+  .input
+  input[type='radio']:checked:disabled
+  + label:after,
+.new
+  .newContainer
+  .bottom
+  .formDiv
+  .form
+  .inputDiv
+  .input
+  input[type='checkbox']:checked:disabled
+  + label:after {
+  border-color: #ccc;
+}
+
+.new .newContainer .bottom .formDiv .form .inputDiv .input input[type='radio'] + label:before,
+.new .newContainer .bottom .formDiv .form .inputDiv .input input[type='checkbox'] + label:before {
+  content: '';
+  width: 26px;
+  height: 26px;
+  float: left;
+  margin-right: 0.5em;
+  border: 2px solid #ccc;
+  background: #fff;
+  margin-top: 0.5em;
+}
+.new .newContainer .bottom .formDiv .form .inputDiv .input input[type='radio'] + label:before {
+  border-radius: 100%;
+}
+
+.new
+  .newContainer
+  .bottom
+  .formDiv
+  .form
+  .inputDiv
+  .input
+  input[type='radio']:checked
+  + label:after {
+  content: '';
+  width: 0;
+  height: 0;
+  border: 7px solid var(--PrimaryColor);
+  float: left;
+  margin-left: -1.85em;
+  margin-top: 1em;
+  border-radius: 100%;
+}
+.new
+  .newContainer
+  .bottom
+  .formDiv
+  .form
+  .inputDiv
+  .input
+  input[type='checkbox']:checked
+  + label:after {
+  content: '';
+  width: 12px;
+  height: 6px;
+  border: 4px solid var(--PrimaryColor);
+  float: left;
+  margin-left: -2.1em;
+  border-right: 0;
+  border-top: 0;
+  margin-top: 1em;
+  transform: rotate(-55deg);
+}
+
+.new
+  .newContainer
+  .bottom
+  .formDiv
+  .form
+  .inputDiv
+  .input
+  input[type='radio']:checked
+  + label:before,
+.new
+  .newContainer
+  .bottom
+  .formDiv
+  .form
+  .inputDiv
+  .input
+  input[type='checkbox']:checked
+  + label:before {
+  border-color: var(--PrimaryColor);
+}
+
+.new
+  .newContainer
+  .bottom
+  .formDiv
+  .form
+  .inputDiv
+  .input
+  input[type='radio']:checked:disabled
+  + label,
+.new
+  .newContainer
+  .bottom
+  .formDiv
+  .form
+  .inputDiv
+  .input
+  input[type='checkbox']:checked:disabled
+  + label {
+  background: #ccc;
+  color: #fff !important;
+}
+
+.new
+  .newContainer
+  .bottom
+  .formDiv
+  .form
+  .inputDiv
+  .input
+  input[type='radio']:checked:disabled
+  + label:before,
+.new
+  .newContainer
+  .bottom
+  .formDiv
+  .form
+  .inputDiv
+  .input
+  input[type='checkbox']:checked:disabled
+  + label:before {
+  border-color: #bdbdbd;
+}
+
+.new .newContainer .bottom .formDiv .form .inputDivGrid {
+  width: 100%;
+  margin-bottom: 1rem;
 }
 
 @media screen and (max-width: 602px) {

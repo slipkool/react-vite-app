@@ -39,3 +39,8 @@ export interface AccessTokenResponse {
   }
   error?: string
 }
+
+export interface TestData {
+  id: number
+  description: string
+}
